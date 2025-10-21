@@ -1,0 +1,51 @@
+<div class="main-card">
+  <div class="left-seaction">
+    <mat-icon svgIcon="logo-icon" class="logo-icon"></mat-icon>
+  </div>
+  <div class="mid-seaction">
+    <p class="title">Login into your account</p>
+    <p class="paragraph">Free flashcards website</p>
+  </div>
+  <div class="right-seaction">
+    <form class="form-items" [formGroup]="testForm">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          class="input-item"
+          formControlName="username"
+          type="email"
+          required
+        />
+        <!-- <mat-error
+              *ngIf="
+                loginForm.get('email')?.invalid &&
+                loginForm.get('email')?.touched
+              "
+            >
+              Please enter a valid email
+            </mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="Password" required />
+
+        <!-- <mat-error
+              *ngIf="
+                loginForm.get('Password')?.invalid &&
+                loginForm.get('Password')?.touched
+                "
+                >
+                Please enter a valid Password
+              </mat-error> -->
+      </mat-form-field>
+      <div class="bottom-card">
+        <div class="log-but">Log In</div>
+        <div class="sign-text">
+          Dont have an account? <a href="#">Sign up</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
